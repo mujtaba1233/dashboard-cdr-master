@@ -10,6 +10,7 @@ import {
 } from "../services/troubleshooting1";
 import { troubleShooting5columns } from "../utility/troubleShootingColumnsData";
 import Spinner from "../shared/Spinner";
+import { Button, Grid } from "@mui/material";
 
 export const Troubleshooting5 = () => {
   useEffect(() => {
@@ -422,7 +423,7 @@ export const Troubleshooting5 = () => {
     },
   };
 
-  if (loading) return <Spinner />;
+  // if (loading) return <Spinner />;
 
   return (
     <>

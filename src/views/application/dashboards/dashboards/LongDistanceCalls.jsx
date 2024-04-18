@@ -20,6 +20,8 @@ import ChartCard from "../../layout/chartCard";
 import DataCard from "../../layout/dataCard";
 // import moment from "moment";
 import { connect } from "react-redux";
+import SeriesCard from "views/application/layout/seriesCard";
+import { Typography } from "@mui/material";
 
 const LongDistanceCalls = ({ date }) => {
   // const [data, setData] = useState({
@@ -251,32 +253,39 @@ const LongDistanceCalls = ({ date }) => {
       </Grid>
       <Grid item xs={12}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
-            <div className="card">
-              <div className="card-body">
-                <h4 className="card-title align-self-start">
-                  Outbound Calls to Long Distance Numbers by SIP Trunk
-                </h4>
-                <div className="d-flex justify-content-around">
-                  {[80, 20].map((el, index) => (
-                    <h2 key={index} className="text-success">
-                      {el}
-                    </h2>
-                  ))}
-                </div>
-                <div className="d-flex justify-content-around">
-                  {["Label1", "Label2"].map((el, index) => (
-                    <small key={index} className="text-primary">
-                      {el}
-                    </small>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <Grid item xs={6}>
+            <SeriesCard
+              title={"Outbound Calls to Long Distance Numbers by SIP Trunk"}
+              labels={[
+                <Typography variant="body1" className="text-primary">Label 1</Typography>,
+                <Typography variant="body1" className="text-primary">Label 2</Typography>,
+                <Typography variant="body1" className="text-primary">Label 3</Typography>
+              ]}
+              data={[
+                <Typography variant="h2" className="text-success">20</Typography>,
+                <Typography variant="h2" className="text-success">30</Typography>,
+                <Typography variant="h2" className="text-success">40</Typography>
+              ]}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <SeriesCard
+              title={"Incomming Calls from Long Distance Numbers by SIP Trunk"}
+              labels={[
+                <Typography variant="body1" className="text-primary">Label 1</Typography>,
+                <Typography variant="body1" className="text-primary">Label 2</Typography>,
+                <Typography variant="body1" className="text-primary">Label 3</Typography>
+              ]}
+              data={[
+                <Typography variant="h2" className="text-success">20</Typography>,
+                <Typography variant="h2" className="text-success">30</Typography>,
+                <Typography variant="h2" className="text-success">40</Typography>
+              ]}
+            />
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12}>
+      {/* <Grid item xs={12}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <div className="card">
@@ -302,7 +311,7 @@ const LongDistanceCalls = ({ date }) => {
             </div>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
       <Grid item xs={12}>
         <Grid container spacing={3}>
           <Grid item xs={6}>

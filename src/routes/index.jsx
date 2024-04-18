@@ -8,6 +8,7 @@ import AuthenticationRoutes from './AuthenticationRoutes';
 
 // project import
 import Loadable from 'ui-component/Loadable';
+// import Login from 'views/pages/authentication/authentication3/Login3';
 
 const PagesLanding = Loadable(lazy(() => import('views/pages/landing')));
 

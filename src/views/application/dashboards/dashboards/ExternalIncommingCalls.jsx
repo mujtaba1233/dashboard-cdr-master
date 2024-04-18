@@ -14,7 +14,7 @@ import { connect } from "react-redux";
 import ChartCard from "../../layout/chartCard";
 import SeriesCard from "../../layout/seriesCard";
 import DataCard from "../../layout/dataCard";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { BarChart } from "../../charts/BarChart";
 import DoughnutChart from "../../charts/DoughnutChart";
 import { HorizontalBarChart } from "../../charts/HorizontalBarChart";
@@ -119,24 +119,24 @@ const ExternalIncommingCalls = ({ date }) => {
       {/* <h2 style={{ padding: "16px 0" }}>External Incoming Calls</h2> */}
       <Grid container spacing={2}>
         {/* DataCard and SeriesCard */}
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6}>
           <DataCard
             label="External Incoming Calls count"
-            data={<h2 style={{ padding: "16px" }}>123</h2>}
+            data={123}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={6}>
           <SeriesCard
-            title="External Incoming calls count by Duration"
+            title={"Emergency 911 calls by Duration"}
             labels={[
-              <p className="text-primary">Label 1</p>,
-              <p className="text-primary">Label 2</p>,
-              <p className="text-primary">Label 3</p>
+              <Typography variant="body1" className="text-primary">Label 1</Typography>,
+              <Typography variant="body1" className="text-primary">Label 2</Typography>,
+              <Typography variant="body1" className="text-primary">Label 3</Typography>
             ]}
             data={[
-              <h2 className="text-success">10</h2>,
-              <h2 className="text-success">20</h2>,
-              <h2 className="text-success">30</h2>
+              <Typography variant="h2" className="text-success">20</Typography>,
+              <Typography variant="h2" className="text-success">30</Typography>,
+              <Typography variant="h2" className="text-success">40</Typography>
             ]}
           />
         </Grid>

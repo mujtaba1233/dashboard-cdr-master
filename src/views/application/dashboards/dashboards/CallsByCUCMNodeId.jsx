@@ -19,6 +19,7 @@ import PieChart from "../../charts/PieChart";
 import SeriesCard from "../../layout/seriesCard";
 // import moment from "moment";
 import { connect } from "react-redux";
+import { Typography } from "@mui/material";
 
 const CallsByCUCMNodeId = ({ date }) => {
   // const [state, setState] = useState({
@@ -511,23 +512,31 @@ const CallsByCUCMNodeId = ({ date }) => {
         <Grid item xs={6}>
           <SeriesCard
             title={"Call counts by Origin CUCM Node ID"}
-            labels={labels.map((el) => (
-              <small className="text-primary">{el}</small>
-            ))}
-            data={data.map((el) => (
-              <h2 className="text-success">{el}</h2>
-            ))}
+            labels={[
+              <Typography variant="body1" className="text-primary">Label 1</Typography>,
+              <Typography variant="body1" className="text-primary">Label 2</Typography>,
+              <Typography variant="body1" className="text-primary">Label 3</Typography>
+            ]}
+            data={[
+              <Typography variant="h2" className="text-success">124</Typography>,
+              <Typography variant="h2" className="text-success">30</Typography>,
+              <Typography variant="h2" className="text-success">430</Typography>
+            ]}
           />
         </Grid>
         <Grid item xs={6}>
           <SeriesCard
             title={"Call counts by Destination CUCM Node ID"}
-            labels={labels.map((el) => (
-              <small className="text-primary">{el}</small>
-            ))}
-            data={data.map((el) => (
-              <h2 className="text-success">{el}</h2>
-            ))}
+            labels={[
+              <Typography variant="body1" className="text-primary">Label 1</Typography>,
+              <Typography variant="body1" className="text-primary">Label 2</Typography>,
+              <Typography variant="body1" className="text-primary">Label 3</Typography>
+            ]}
+            data={[
+              <Typography variant="h2" className="text-success">240</Typography>,
+              <Typography variant="h2" className="text-success">304</Typography>,
+              <Typography variant="h2" className="text-success">402</Typography>
+            ]}
           />
         </Grid>
 

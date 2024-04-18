@@ -15,6 +15,10 @@ import CustomizeSection from './CustomizeSection';
 import PreBuildDashBoard from './PreBuildDashBoard';
 import StartupProjectSection from './StartupProjectSection';
 import { ThemeMode } from 'config';
+import useAuth from 'hooks/useAuth';
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
+import { DASHBOARD_PATH } from 'config';
 //import IncludeSection from './IncludeSection';
 //import RtlInfoSection from './RtlInfoSection';
 
@@ -22,7 +26,16 @@ import { ThemeMode } from 'config';
 
 const Landing = () => {
     const theme = useTheme();
+    const { isLoggedIn } = useAuth();
+    const navigate = useNavigate();
 
+    useEffect(() => {
+        if (isLoggedIn) {
+            navigate(DASHBOARD_PATH, { replace: true });
+        } else {
+            navigate('/login')
+        }
+    }, [isLoggedIn, navigate]);
     return (
         <>
             {/* 1. header and hero section */}

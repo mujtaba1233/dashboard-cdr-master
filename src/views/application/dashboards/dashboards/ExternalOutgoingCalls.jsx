@@ -17,7 +17,7 @@ import ChartCard from "../../layout/chartCard";
 import DoughnutChart from "../../charts/DoughnutChart";
 import { HorizontalBarChart } from "../../charts/HorizontalBarChart";
 import { BarChart } from "../../charts/BarChart";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 const ExternalOutgoingCalls = ({ date }) => {
   // const [state, setState] = useState({
@@ -79,28 +79,28 @@ const ExternalOutgoingCalls = ({ date }) => {
     <div>
       {/* <h2 style={{ padding: "16px 0" }}>External Outgoing Calls</h2> */}
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={6}>
           <DataCard
             label="External Outgoing Calls count"
             data={<h2 style={{ padding: "16px" }}>100</h2>}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={6}>
           <SeriesCard
-            title="External Outgoing calls count by Duration"
+            title={"Emergency 911 calls by Duration"}
             labels={[
-              <p style={{ color: "blue" }}>Label1</p>,
-              <p style={{ color: "blue" }}>Label2</p>,
-              <p style={{ color: "blue" }}>Label3</p>
+              <Typography variant="body1" className="text-primary">Label 1</Typography>,
+              <Typography variant="body1" className="text-primary">Label 2</Typography>,
+              <Typography variant="body1" className="text-primary">Label 3</Typography>
             ]}
             data={[
-              <h2 style={{ color: "green" }}>10</h2>,
-              <h2 style={{ color: "green" }}>20</h2>,
-              <h2 style={{ color: "green" }}>30</h2>
+              <Typography variant="h2" className="text-success">20</Typography>,
+              <Typography variant="h2" className="text-success">30</Typography>,
+              <Typography variant="h2" className="text-success">40</Typography>
             ]}
-            col={8}
           />
         </Grid>
+
         <Grid item xs={12} sm={6}>
           <ChartCard
             label="External Outgoing calls count by SIP Trunk"

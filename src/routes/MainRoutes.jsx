@@ -31,6 +31,10 @@ import Troubleshooting1 from 'views/application/dashboards/troubleshooting/Troub
 import Troubleshooting2 from 'views/application/dashboards/troubleshooting/TroubleShooting2';
 import Troubleshooting3 from 'views/application/dashboards/troubleshooting/TroubleShooting3';
 import Troubleshooting4 from 'views/application/dashboards/troubleshooting/TroubleShooting4';
+import Troubleshooting5 from 'views/application/dashboards/troubleshooting/TroubleShooting5';
+import Troubleshooting6 from 'views/application/dashboards/troubleshooting/TroubleShooting6';
+import Troubleshooting7 from 'views/application/dashboards/troubleshooting/TroubleShooting7';
+import Troubleshooting8 from 'views/application/dashboards/troubleshooting/TroubleShooting8';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -388,24 +392,24 @@ const MainRoutes = {
         },
         {
             path: '/apps/dashboards/troubleshooting/troubleshooting5',
-            element: <TollFreeCalls />
+            element: <Troubleshooting5 />
         },
         {
             path: '/apps/dashboards/troubleshooting/troubleshooting6',
-            element: <TollFreeCalls />
+            element: <Troubleshooting6/>
         },
         {
             path: '/apps/dashboards/troubleshooting/troubleshooting7',
-            element: <TollFreeCalls />
+            element: <Troubleshooting7 />
         },
         {
             path: '/apps/dashboards/troubleshooting/troubleshooting8',
-            element: <TollFreeCalls />
+            element: <Troubleshooting8 />
         },
-        {
-            path: '/apps/dashboards/troubleshooting/troubleshooting9',
-            element: <TollFreeCalls />
-        },
+        // {
+        //     path: '/apps/dashboards/troubleshooting/troubleshooting9',
+        //     element: <Troubleshooting9 />
+        // },
         {
             path: '/apps/dashboards/troubleshooting/troubleshooting10',
             element: <TollFreeCalls />
