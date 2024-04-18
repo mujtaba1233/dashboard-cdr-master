@@ -46,6 +46,7 @@
         "firebase": "^10.8.0",
         "formik": "^2.4.5",
         "framer-motion": "^11.0.6",
+        "gh-pages": "^6.1.1",
         "history": "^5.3.0",
         "jwt-decode": "^4.0.0",
         "lodash-es": "^4.17.21",
@@ -90,6 +91,7 @@
         "remark-gfm": "^4.0.0",
         "slick-carousel": "^1.8.1",
         "stream-browserify": "^3.0.0",
+        "styled-components": "^6.1.8",
         "stylis-plugin-rtl": "^2.1.1",
         "swr": "^2.2.5",
         "util": "^0.12.5",
@@ -106,6 +108,7 @@
         "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
         "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
         "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "homepage": "http://mujtaba1233.github.io/dashboard-cdr-master",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build"
     },
