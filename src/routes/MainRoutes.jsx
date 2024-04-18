@@ -210,18 +210,18 @@ const MainRoutes = {
         </AuthGuard>
     ),
     children: [
-        {
-            path: '/widget/statistics',
-            element: <WidgetStatistics />
-        },
-        {
-            path: '/widget/data',
-            element: <WidgetData />
-        },
-        {
-            path: '/widget/chart',
-            element: <WidgetChart />
-        },
+        // {
+        //     path: '/widget/statistics',
+        //     element: <WidgetStatistics />
+        // },
+        // {
+        //     path: '/widget/data',
+        //     element: <WidgetData />
+        // },
+        // {
+        //     path: '/widget/chart',
+        //     element: <WidgetChart />
+        // },
 
         {
             path: '/apps/user/social-profile/:tab',
